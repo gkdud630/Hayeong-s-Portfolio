@@ -48,7 +48,7 @@ const GwangsanPj = () => {
                             2023.08.01 ~ 2023.08.31
                             <span> (4인 팀 프로젝트)</span>
                         </div>
-                        <div className="project_info">
+                        {/* <div className="project_info">
                             <div className="project_img">
                                 <div className="slider-container">
                                     <ul
@@ -64,7 +64,7 @@ const GwangsanPj = () => {
                                         ))}
                                     </ul>
 
-                                    {/* Pagination */}
+                                  
                                     <div className="slider-pagination">
                                         {Imgs
                                             .slice(
@@ -89,7 +89,7 @@ const GwangsanPj = () => {
                                                 );
                                             })}
                                     </div>
-                                    {/* Navigation Buttons */}
+                           
                                     <button className="slider-button slider-button-prev" onClick={handlePrev} disabled={currentIndex === 0}>
                                         &lt;
                                     </button>
@@ -100,7 +100,7 @@ const GwangsanPj = () => {
 
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="project_des">
                             <div className="project_txt2">
                                 <div className="project_txt2_1">개요</div>

@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
-import img1 from '../../assets/project/로그인.png'
-import img2 from '../../assets/project/공공시설관리_지도형.png'
-import img3 from '../../assets/project/공공시설관리_등록.png'
-import img4 from '../../assets/project/공공시설 공급분석.png'
-import img5 from '../../assets/project/기부채납 공간관리.png'
-import img6 from '../../assets/project/기부채납 공간관리_등록.png'
-import img7 from '../../assets/project/관리_부서관리.png'
-import img8 from '../../assets/project/관리_기초데이터 관리.png'
+import img1 from '../../assets/project/dong_메인.png'
+import img2 from '../../assets/project/dong_로그인.png'
+import img3 from '../../assets/project/dong_쓰레기해결.png'
+import img4 from '../../assets/project/dong_쓰레기해결하기 지도형.png'
+import img5 from '../../assets/project/dong_친환경자원순환센터.png'
+import img6 from '../../assets/project/dong_프로그램신청.png'
+import img7 from '../../assets/project/dong_쓰레기수거차량.png'
+import img8 from '../../assets/project/dong_수거차량도착정보.png'
+import img9 from '../../assets/project/dong_수거함지도.png'
+import img10 from '../../assets/project/dong_순환도시이야기.png'
+
+
 
 const DonguramiPj = () => {
     const Imgs = [
@@ -17,7 +21,9 @@ const DonguramiPj = () => {
         { src: img5, alt: "Image 5" },
         { src: img6, alt: "Image 6" },
         { src: img7, alt: "Image 7" },
-        { src: img8, alt: "Image 8" },
+        { src: img8, alt: "Image 8" }, 
+        { src: img9, alt: "Image 9" },
+        { src: img10, alt: "Image 10" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);

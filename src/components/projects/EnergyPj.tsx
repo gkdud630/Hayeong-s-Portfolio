@@ -49,7 +49,7 @@ const EnergyPj = () => {
                             2023.09.01 ~ 2023.11.31
                             <span> (4인 팀 프로젝트)</span>
                         </div>
-                        <div className="project_info">
+                        {/* <div className="project_info">
                             <div className="project_img">
                                 <div className="slider-container">
                                     <ul
@@ -65,7 +65,7 @@ const EnergyPj = () => {
                                         ))}
                                     </ul>
 
-                                    {/* Pagination */}
+                              
                                     <div className="slider-pagination">
                                         {Imgs
                                             .slice(
@@ -90,7 +90,7 @@ const EnergyPj = () => {
                                                 );
                                             })}
                                     </div>
-                                    {/* Navigation Buttons */}
+                                  
                                     <button className="slider-button slider-button-prev" onClick={handlePrev} disabled={currentIndex === 0}>
                                         &lt;
                                     </button>
@@ -101,7 +101,7 @@ const EnergyPj = () => {
 
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="project_des">
                             <div className="project_txt2">
                                 <div className="project_txt2_1">개요</div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Headers from './components/Headers';
@@ -7,12 +7,27 @@ import Footer from './components/Footer';
 import Mainpage from './pages/Mainpage';
 
 function App() {
-
+  // 각 섹션의 ref 생성
+  const aboutMeRef = useRef<HTMLDivElement | null>(null);
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+  const certificateRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const careerRef = useRef<HTMLDivElement | null>(null);
   return (
     <div id='wrapper'>
-     <Headers/>
-     <Mainpage/>
-     <Footer/>
+      <Headers
+        aboutMeRef={aboutMeRef}
+        skillsRef={skillsRef}
+        certificateRef={certificateRef}
+        projectsRef={projectsRef}
+        careerRef={careerRef} />
+      <Mainpage
+        aboutMeRef={aboutMeRef}
+        skillsRef={skillsRef}
+        certificateRef={certificateRef}
+        projectsRef={projectsRef}
+        careerRef={careerRef} />
+      <Footer />
     </div>
   );
 }

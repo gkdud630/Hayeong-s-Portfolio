@@ -14,8 +14,14 @@ import DonguramiPj from '../components/projects/DonguramiPj'
 import EnergyPj from '../components/projects/EnergyPj'
 import GwangsanPj from '../components/projects/GwangsanPj'
 import DobanjangPj from '../components/projects/DobanjangPj'
-
-const Mainpage = () => {
+import nubiz from '../assets/nubiz.png'
+const Mainpage = ({ aboutMeRef, skillsRef, certificateRef, projectsRef, careerRef }: {
+  aboutMeRef: React.RefObject<HTMLDivElement | null>,
+  skillsRef: React.RefObject<HTMLDivElement | null>,
+  certificateRef: React.RefObject<HTMLDivElement | null>,
+  projectsRef: React.RefObject<HTMLDivElement | null>,
+  careerRef: React.RefObject<HTMLDivElement | null>
+}) => {
   const [activeTab, setActiveTab] = useState<string>('1');
 
   return (
@@ -33,10 +39,10 @@ const Mainpage = () => {
             <br />
             React 웹 개발자, 주하영입니다.
           </div>
-          <div className="btn_more">더 알아보기 ↓</div>
+          {/* <div className="btn_more">더 알아보기 ↓</div> */}
         </div>
       </article>
-      <article className="aboutme">
+      <article className="aboutme" ref={aboutMeRef}>
         <div className="aboutme_inner">
           <div className="comm_tit">
             <div className="comm_tit_img">
@@ -114,11 +120,11 @@ const Mainpage = () => {
           </ul>
         </div>
       </article>
-      <article className="skills">
+      <article className="skills" ref={skillsRef}>
         <div className="skills_inner">
           <div className="comm_tit">
             <div className="comm_tit_img">
-              <img src={link} alt="" />
+              {/* <img src={link} alt="" /> */}
             </div>
             <div className="comm_tit_txt" style={{ borderBottomColor: '#000000' }}>SKILLS</div>
           </div>
@@ -135,20 +141,20 @@ const Mainpage = () => {
           </ul>
         </div>
       </article>
-      <article className="certificate">
+      <article className="certificate" ref={certificateRef}>
         <div className="certificate_inner">
           <div className="comm_tit">
             <div className="comm_tit_img">
-              <img src="images/link2.png" alt="" />
+              {/* <img src="images/link2.png" alt="" /> */}
             </div>
             <div className="comm_tit_txt" style={{ color: '#ffffff', borderBottomColor: '#6c757d' }}>CERTIFICATE</div>
           </div>
           <ul className="certificate_list">
-            {/* <li>
-              <h3>전자정부 프레임워크 개발자 교육 수료</h3>
+            <li>
+              <h3>전자정부 프레임워크 교육 수료</h3>
               <h4>표준프레임워크 포털</h4>
               <p>2025.03.16</p>
-            </li> */}
+            </li>
             <li>
               <h3>SQL 개발자 (SQLD)</h3>
               <h4>한국데이터산업진흥원</h4>
@@ -157,7 +163,7 @@ const Mainpage = () => {
           </ul>
         </div>
       </article>
-      <div className="project-container" >
+      <div className="project-container" ref={projectsRef}>
         {/* 탭 버튼 */}
         <div className="tabs">
           <button
@@ -200,10 +206,10 @@ const Mainpage = () => {
 
         {/* 탭 컨텐츠 */}
         <div className="tab-content">
-          {activeTab === "1" ? <SuwonPj /> : activeTab === "2" ? <SeongbukPj /> : activeTab === "3" ? <DonguramiPj />:activeTab === "4" ? <EnergyPj />:activeTab === "5" ? <GwangsanPj />:activeTab === "6" ? <DobanjangPj />:<></>}
+          {activeTab === "1" ? <SuwonPj /> : activeTab === "2" ? <SeongbukPj /> : activeTab === "3" ? <DonguramiPj /> : activeTab === "4" ? <EnergyPj /> : activeTab === "5" ? <GwangsanPj /> : activeTab === "6" ? <DobanjangPj /> : <></>}
         </div>
       </div>
-      <article className="career">
+      <article className="career" ref={careerRef}>
         <div className="career_inner">
           <div className="comm_tit">
             <div className="comm_tit_img">
@@ -215,7 +221,7 @@ const Mainpage = () => {
             <div className="career_info_inner">
               <div className="career_img">
                 <div className="career_img_inner">
-                  <img src="images/nubiz.png" alt="" />
+                  <img src={nubiz} alt="" />
                 </div>
               </div>
               <div className="career_txt">
